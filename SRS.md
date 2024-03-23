@@ -1,4 +1,4 @@
-EduTechForge
+####EduTechForge
 
 ### Document: System Requirement Specification 
 
@@ -46,8 +46,6 @@ their Trainers as per respective courses.
 	- **User Registration:** Trainer register on the platform by providing necessary information such as name, email, and password,Experience, Qualification.
 	- **Profile Creation:** Trainer complete their profiles, adding details like skills, experience,  and course rates.
 	- **Trainer Interaction:** Students engage with trainer through messages or other communication tools to discuss lecture and more course details.
-	- **Project Commencement:** Once project awarded, freelancers begin working on the project, updating clients on progress.
-	- **Milestone Completion:** Freelancers may submit completed project milestones for client review and approval.
 	- **Payment Release:** Upon course completion and student approval, funds are released from escrow to the Trainer.
 	- **Trainer Feedback:** Student receive feedback and ratings from trainer, contributing to their overall profile reputation.
 
