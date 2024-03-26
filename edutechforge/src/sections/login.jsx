@@ -1,6 +1,17 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const login = () => {
+  const navigate = useNavigate();
+
+  const handlesignup = ()=>{
+   
+    navigate ("/signup");
+
+  }
+
+  
+  
   return (
     <div className="min-h-screen bg-no-repeat bg-cover bg-center" style={{backgroundImage: "url('https://images.unsplash.com/photo-1486520299386-6d106b22014b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80')"}}>
       <div className="flex justify-end">
@@ -34,7 +45,7 @@ const login = () => {
                 </div>
               </div>
             </form>
-            <p className="mt-8"> Don't have an account? <span className="cursor-pointer text-sm text-blue-600">Join free today</span></p>
+            <p className="mt-8"> Don't have an account? <span onClick={handlesignup} className="cursor-pointer text-sm text-blue-600">Join free today</span></p>
           </div>
         </div>
       </div>

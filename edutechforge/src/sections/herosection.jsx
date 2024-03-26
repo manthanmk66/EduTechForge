@@ -9,22 +9,22 @@ function HeroSection() {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentSentenceIndex((prevIndex) => (prevIndex + 1) % sentences.length);
-        }, 2500); // Change sentence every 2.5 seconds
+        }, 2500); 
 
-        return () => clearInterval(interval); // Cleanup interval
+        return () => clearInterval(interval); 
     }, []);
 
     useEffect(() => {
         const currentSentence = sentences[currentSentenceIndex];
         let visibleLettersTemp = "";
 
-        // Loop through each letter of the current sentence
+       
         for (let i = 0; i < currentSentence.length; i++) {
-            // Use setTimeout to delay the addition of each letter
+           
             setTimeout(() => {
                 visibleLettersTemp += currentSentence[i];
                 setVisibleLetters(visibleLettersTemp);
-            }, i * 200); // Delay each letter by 200 milliseconds
+            }, i * 200); 
         }
     }, [currentSentenceIndex]);
 
