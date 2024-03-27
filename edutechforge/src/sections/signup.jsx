@@ -1,35 +1,27 @@
 
 import { useNavigate } from 'react-router-dom';
  import { useState } from 'react';
-const signup = () => {
-
-    const navigate= useNavigate();
-
-    const handlesignin=()=>{
-        navigate("/login")
-
-    }
-    const [accountType, setAccountType]=useState();
 
 
-    // const tabData = [
-    //     {
-    //       id: 1,
-    //       tabName: "Student",
-    //       type: ACCOUNT_TYPE.STUDENT,
-    //     },
-    //     {
-    //       id: 2,
-    //       tabName: "Instructor",
-    //       type: ACCOUNT_TYPE.INSTRUCTOR,
-    //     },
-    //   ]
+ const Signup = () => {
+  const navigate = useNavigate();
+  const [accountType, setAccountType] = useState(null); 
+  const [formData,setFormData]=useState();
+
+  const handleSignin = () => {
+    navigate("/login");
+
+
+  };
+
+ 
+
+
 
     
 
   return (
     <div>
-     {/* <Tab tabData={tabData} field={accountType} setField={setAccountType} /> */}
     <div className="min-h-screen bg-no-repeat bg-cover bg-center" style={{backgroundImage: "url('https://images.unsplash.com/photo-1486520299386-6d106b22014b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80')"}}>
     <div className="flex justify-end">
       <div className="bg-white min-h-screen w-1/2 flex justify-center items-center">
@@ -39,14 +31,47 @@ const signup = () => {
               <span className="text-sm text-gray-900">Welcome back</span>
               <h1 className="text-2xl font-bold">Login to your account</h1>
             </div>
+
+
             <div className="mt-5">
-              <label className="block text-md mb-2" htmlFor="password">Password</label>
-              <input className="px-4 w-full border-2 py-2 rounded-md text-sm outline-none" type="password" name="password" placeholder="password" />
+            <label className="block text-md mb-2" htmlFor="password">Name</label>
+            <input className="px-4 w-full border-2 py-2 rounded-md text-sm outline-none" 
+             type="name" 
+             id="name"
+             name="name"
+             value={formData.name}
+             onChange={(e)=>setFormData({...formData,name:e.target.value})}
+             placeholder="name" />
             </div>
+
+
+            <div className="mt-5">
+            <label className="block text-md mb-2" htmlFor="password">Last Name</label>
+            <input className="px-4 w-full border-2 py-2 rounded-md text-sm outline-none" 
+             type="lname" 
+             id="lname"
+             name="lname"
+             value={formData.lname}
+             onChange={(e)=>setFormData({...formData,lname:e.target.value})}
+             placeholder="lname" />
+            </div>
+
+
             <div className="my-3">
               <label className="block text-md mb-2" htmlFor="email">Email</label>
-              <input className="px-4 w-full border-2 py-2 rounded-md text-sm outline-none" type="email" name="email" placeholder="email" />
+              <input className="px-4 w-full border-2 py-2 rounded-md text-sm outline-none"
+               type="email" 
+               id="email"
+               name="email"
+               value={formData.email}
+               onChange={(e)=>setFormData({...formData,name:e.target.value})}
+               placeholder="email" />
             </div>
+
+
+
+
+
             <div className="flex justify-between">
               <div>
                 <input className="cursor-pointer" type="radio" name="rememberme" />
@@ -54,6 +79,8 @@ const signup = () => {
               </div>
               <span className="text-sm text-blue-700 hover:underline cursor-pointer">Forgot password?</span>
             </div>
+
+            
             <div>
               <button className="mt-4 mb-3 w-full bg-green-500 hover:bg-green-400 text-white py-2 rounded-md transition duration-100">Login now</button>
               <div className="flex space-x-2 justify-center items-end bg-gray-700 hover:bg-gray-600 text-white py-2 rounded-md transition duration-100">
@@ -62,7 +89,7 @@ const signup = () => {
               </div>
             </div>
           </form>
-          <p className="mt-8">Already have an account? <span onClick={handlesignin} className="cursor-pointer text-sm text-blue-600">Login</span></p>
+          <p className="mt-8">Already have an account? <span onClick={handleSignin} className="cursor-pointer text-sm text-blue-600">Login</span></p>
         </div>
       </div>
     </div>
@@ -73,4 +100,4 @@ const signup = () => {
 };
 
 
-export default signup
+export default Signup

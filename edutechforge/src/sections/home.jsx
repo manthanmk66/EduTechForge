@@ -1,20 +1,20 @@
 import React from 'react'
-import Navbar from '@/components/ui/navabar'
+import Navbar from '../common/navabar'
 import HeroSection from './herosection'
-import Error from '@/components/ui/errorpage'
+import Error from '../common/errorpage'
 import Footer from './footer'
-import { Button } from '@/components/ui/button'
+import { Button } from "../components/ui/button"
 
 const home = () => {
   return (
     <div>
-          <Navbar />
+        <Navbar />
         <Button>Hello Everyone</Button>
         <HeroSection />
         <Error />
         <Footer />
        
-        
+          
     </div>
   )
 }
