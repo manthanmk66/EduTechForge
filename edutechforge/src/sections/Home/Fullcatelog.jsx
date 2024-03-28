@@ -2,15 +2,17 @@ import React from "react";
 import {Button } from "../../components/ui/button"; 
 import { FaArrowRight } from "react-icons/fa"; 
 import HighlightText from "./Highlighttext";
+import Background from"../../assets/bghome.svg";
 
 
 const FullCatalog = () => {
   return (
     <div>
       {/* Section 2 */}
-      
-      <div style={{ backgroundImage: '")', backgroundSize: 'cover', backgroundPosition: 'center', minHeight: '333px' }}> className="bg-pure-greys-5 text-richblack-700">
-        <div className="homepage_bg h-[320px]">
+      <div className="bg-pure-greys-5 text-richblack-700" >
+        <div className=" h-[320px]" style={{
+              background: `url(${Background})`,
+            }}>
           {/* Explore Full Category Section */}
           <div className="mx-auto flex w-11/12 max-w-maxContent flex-col items-center justify-between gap-8">
             <div className="lg:h-[150px]"></div>

@@ -16,7 +16,7 @@ const home = () => {
   return (
     <div className='space-y-20' >
         <Navbar />
-        <Button>Hello Everyone</Button>
+        {/* <Button className="justify-center items-center">Hello Everyone</Button> */}
         <HeroSection />
         <FullCatalog/>
         <ExploreMore/>
