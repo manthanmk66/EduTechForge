@@ -14,7 +14,7 @@ import FullCatalog from './Home/Fullcatelog'
 
 const home = () => {
   return (
-    <div className='space-y-20' >
+    <div className='space-y-2' >
         <Navbar />
         {/* <Button className="justify-center items-center">Hello Everyone</Button> */}
         <HeroSection />
