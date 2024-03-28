@@ -4,6 +4,9 @@ import HeroSection from './herosection'
 import Error from '../common/errorpage'
 import Footer from './footer'
 import { Button } from "../components/ui/button"
+import Rating from "./rating"
+import Timeline from "./Timeline"
+
 
 const home = () => {
   return (
@@ -12,6 +15,9 @@ const home = () => {
         <Button>Hello Everyone</Button>
         <HeroSection />
         <Error />
+        <Rating/>
+        <Timeline/>
+      
         <Footer />
        
           
