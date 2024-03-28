@@ -9,15 +9,17 @@ import Timeline from "./Home/Timeline"
 import LearningCards from "../sections/Home/Learningcards"
 import Instructor from "./Home/InstructorSection"
 import ExploreMore from './Home/Exploremore'
+import FullCatalog from './Home/Fullcatelog'
 
 
 const home = () => {
   return (
-    <div>
+    <div className='space-y-20' >
         <Navbar />
         <Button>Hello Everyone</Button>
         <HeroSection />
-        {/* <ExploreMore/> */}
+        <FullCatalog/>
+        <ExploreMore/>
         <Error />
         <Rating/>
        
