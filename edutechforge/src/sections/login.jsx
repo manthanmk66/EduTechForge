@@ -23,7 +23,7 @@ const Login = () => {
                 <input className="px-4 w-full border-2 py-2 rounded-md text-sm outline-none" type="password" name="password" placeholder="password" />
               </div>
               <div className="my-3">
-                <label className="block text-md mb-2" htmlFor="email">Email</label>
+                <label className="block text-md mb-2" htmlFor="email">EmailID</label>
                 <input className="px-4 w-full border-2 py-2 rounded-md text-sm outline-none" type="email" name="email" placeholder="email" />
               </div>
               <div className="flex justify-between">
