@@ -5,19 +5,22 @@ import Signup from "./sections/signup"
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from './sections/home'
 import Rating from "./sections/rating"
+import Navbar from './common/navabar'
 
 function App() {
   return (
 
     <div>
-    <BrowserRouter>
+     
+    
+    <Navbar/>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup/>}/>
           <Route path="/rating" element={<Rating/>}/>
         </Routes>
-    </BrowserRouter>
+    
     </div>
   )
 }

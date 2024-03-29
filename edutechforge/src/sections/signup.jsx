@@ -40,7 +40,7 @@ const Signup = () => {
               </div>
 
               <div className='flex flex-row'> {/* Use flex container for radio buttons */}
-                <div className="mt-5 mr-5">
+                <div className="mt-2 mr-5">
                   <label className="block text-md mb-2" htmlFor="student">Student</label>
                   <input
                     className="px-4 border-2 py-2 rounded-md text-sm outline-none"
@@ -51,7 +51,7 @@ const Signup = () => {
                     onChange={(e) => setFormData({ ...formData, role: e.target.value })}
                   />
                 </div>
-                <div className="mt-5">
+                <div className="mt-2">
                   <label className="block text-md mb-2" htmlFor="instructor">Instructor</label>
                   <input
                     className="px-4 border-2 py-2 rounded-md text-sm outline-none"
@@ -64,7 +64,7 @@ const Signup = () => {
                 </div>
               </div>
 
-              <div className="mt-5">
+              <div className="mt-2">
                 <label className="block text-md mb-2" htmlFor="name">Name</label>
                 <input
                   className="px-4 w-full border-2 py-2 rounded-md text-sm outline-none"
@@ -103,6 +103,37 @@ const Signup = () => {
                 />
               </div>
 
+
+              <div className="my-3">
+                <label className="block text-md mb-2" htmlFor="email">Password</label>
+                <input
+                  className="px-4 w-full border-2 py-2 rounded-md text-sm outline-none"
+                  type="Password"
+                  id="Password"
+                  name="Password"
+                  value={formData.Password}
+                  onChange={(e) => setFormData({ ...formData, Password: e.target.value })}
+                  placeholder="Password"
+                />
+              </div>
+
+
+              
+              {/* <div className="my-3">
+                <label className="block text-md mb-2" htmlFor="email">Highest Qualification</label>
+                <input
+                  className="px-4 w-full border-2 py-2 rounded-md text-sm outline-none"
+                  type="qualification"
+                  id="qualification"
+                  name="qualification"
+                  value={formData.qualification}
+                  onChange={(e) => setFormData({ ...formData, qualification: e.target.value })}
+                  placeholder="qualification"
+                />
+              </div> */}
+
+
+
               <div className="flex justify-between">
                 <div>
                   <input className="cursor-pointer" type="checkbox" name="rememberme" />
@@ -111,10 +142,10 @@ const Signup = () => {
                 <span className="text-sm text-blue-700 hover:underline cursor-pointer">Forgot password?</span>
               </div>
               <div>
-              <button type="submit" className="mt-4 mb-3 w-full bg-green-500 hover:bg-green-400 text-white py-2 rounded-md transition duration-100">Sign up now</button>
+              <button type="submit" className=" w-full bg-green-500 hover:bg-green-400 text-white py-2 rounded-md transition duration-100">Sign up now</button>
               </div>
             </form>
-            <p className="mt-8">Already have an account? <span onClick={handleSignup} className="cursor-pointer text-sm text-blue-600">Login</span></p>
+            <p className="mt-2">Already have an account? <span onClick={handleSignup} className="cursor-pointer text-sm text-blue-600">Login</span></p>
           </div>
         </div>
       </div>

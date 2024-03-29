@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../common/navabar'
+// import Navbar from '../common/navabar'
 import HeroSection from './herosection'
 import Error from '../common/errorpage'
 import Footer from './footer'
@@ -15,7 +15,7 @@ import FullCatalog from './Home/Fullcatelog'
 const home = () => {
   return (
     <div className='space-y-2' >
-        <Navbar />
+        {/* <Navbar /> */}
         {/* <Button className="justify-center items-center">Hello Everyone</Button> */}
         <HeroSection />
         <FullCatalog/>
