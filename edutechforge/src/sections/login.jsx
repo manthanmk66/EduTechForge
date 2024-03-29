@@ -9,8 +9,8 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen bg-no-repeat bg-cover bg-center" style={{backgroundImage: "url('https://images.unsplash.com/photo-1486520299386-6d106b22014b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80')"}}>
-      <div className="flex justify-end">
+    // <div className="min-h-screen bg-no-repeat bg-cover bg-center" style={{backgroundImage: "url('https://images.unsplash.com/photo-1486520299386-6d106b22014b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80')"}}>
+      <div className="flex justify-end justify-center items-center">
         <div className="bg-white min-h-screen w-1/2 flex justify-center items-center">
           <div>
             <form>
@@ -35,17 +35,17 @@ const Login = () => {
               </div>
               <div>
                 <button className="mt-4 mb-3 w-full bg-green-500 hover:bg-green-400 text-white py-2 rounded-md transition duration-100">Login now</button>
-                <div className="flex space-x-2 justify-center items-end bg-gray-700 hover:bg-gray-600 text-white py-2 rounded-md transition duration-100">
+                {/* <div className="flex space-x-2 justify-center items-end bg-gray-700 hover:bg-gray-600 text-white py-2 rounded-md transition duration-100">
                   <img className="h-5 cursor-pointer" src="https://i.imgur.com/arC60SB.png" alt="" />
                   <button>Or sign-in with google</button>
-                </div>
+                </div> */}
               </div>
             </form>
             <p className="mt-8"> Don't have an account? <span onClick={handleSignup} className="cursor-pointer text-sm text-blue-600">Join free today</span></p>
           </div>
         </div>
       </div>
-    </div>
+   
   );
 };
 
