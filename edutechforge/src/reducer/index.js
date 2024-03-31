@@ -7,7 +7,7 @@ import profileReducer from "../slices/profileSlice";
 const rootReducer =combineReducers({
     auth: authReducer,
     profile:profileReducer,
-    cart:cartReducer,
+    cart:cartReducer ,
 })
 
 export default rootReducer
