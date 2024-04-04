@@ -13,6 +13,11 @@
   }
 }
 
+.lable-style {
+  font-size: 14px;
+  color: #232323; /* Assuming text-richblack-5 corresponds to #232323 */
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
