@@ -5,7 +5,8 @@ import Signup from "./sections/signup"
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from './sections/home'
 import Rating from "./sections/rating"
-import Navbar from './common/navabar'
+import Navbar from './common/navabar';
+import About from "./sections/About"
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup/>}/>
           <Route path="/rating" element={<Rating/>}/>
+          <Route path="/about" element={<About/>}/>
         </Routes>
     
     </div>
