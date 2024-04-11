@@ -1,6 +1,8 @@
 const bcrypt = require("bcrypt");
 const Users = require("../models/Users");
 require("dotenv").config();
+const jwt = require("jsonwebtoken")
+require("dotenv"),config();
 
 // Signup route handler
 exports.signup = async (req, res) => {
@@ -50,3 +52,80 @@ exports.signup = async (req, res) => {
     });
   }
 };
+
+//  login
+
+exports.login=async (req,res) =>{
+  try{
+
+    //data fetch
+
+    const {email,password}=req.body
+
+    //validation on email and Password
+    if(!email || !password){
+      return res.status(400).json({
+
+        succes:false,
+        message:"Please Fill all the Details Carefully"
+      })
+    }
+
+    //check for registered users
+    const user=await Users.findOne({email})
+
+    //if not a  regiastered user
+    if(!user){
+
+      return res.status(401).json({
+        success:false,
+        message:"User not registered"
+      })
+    }
+    const payload ={
+      email:user.email,
+      id:user._id,
+      role:user.role,
+
+    }
+    //verify password and Generate a JWT Token
+    if(await bcrypt.compare(password,user.password)){
+      let token =jwt.sign(payload,process.env.JWT_SECRET,
+      {
+        expiresIn:"2h "
+      })
+        // Restricted for not fetching password
+      user.token=token;
+      user.password=undefined;
+
+      const options={
+        expires:new Date(Date.now()+3*24*60*60*1000),
+        httpOnly:true,
+
+      }
+        res.cookie("token",token,options).status(200)
+        .json({
+          success:true,
+          message:"User Logged in Successfully",
+          user,
+          message:"user Logged in successfully"
+        });
+      
+     
+
+
+
+
+    }
+    else{
+      //password do not match
+      return res.status(403).json({
+        succes:false,
+        message:"password Incorrect"
+      })
+    }
+  }
+  catch(error){
+
+  }
+}
