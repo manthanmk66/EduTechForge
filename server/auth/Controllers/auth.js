@@ -91,6 +91,7 @@ exports.login = async (req, res) => {
       // Restricted for not fetching password
       // user = user.toObject();
 
+      user = user.toObject();
       user.token = token;
       user.password = undefined;
 
