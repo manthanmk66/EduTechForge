@@ -41,6 +41,10 @@ const userSchema=new mongoose.Schema({
         type:String,
         required:true,
     },
+    token:{
+        type:String,
+        required:true,
+    },
     courseProgress:[
 
         {
